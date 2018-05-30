@@ -65,6 +65,3 @@ function toggleClass(){
         $("h1").addClass("active");
     }
 }
-
-
-
