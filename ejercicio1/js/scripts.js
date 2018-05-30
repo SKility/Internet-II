@@ -1,8 +1,7 @@
 var listusers={
     listall:function(){
-        for(var i=0;i<listusers.items.length;i++){
+        for(var i=0;i<listusers.users.length;i++){
             $("#table-body span").append(listusers.assamble(listusers.users[i]));
-            var items=["brand", "location", "lunch", "price"];
        };
        
     
