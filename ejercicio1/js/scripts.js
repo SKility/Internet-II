@@ -1,7 +1,7 @@
-var listusers={
+var listelements={
     listall:function(){
         for(var i=0;i<listusers.items.length;i++){
-            $("#table-body").append(listusers.assamble(this.items[i]));
+            $("#table-body").append(listelements.assamble(this.items[i]));
        };
     },
     assamble:function(items){
@@ -17,15 +17,34 @@ var listusers={
     },
     items:[],
     setusers:function(items){
-    listusers.items=items
+        listelements.items=items
     },
     log:function(item){
         console.log(this.items[item]);
+    },
+
+    function: listByPrice(price){
+        for(var i=0;listelements.items.length>i;i++){
+            if(listelements.items[i].price<price){
+                listelements.assamble(listelements.items[i]);
+              $("#table-body").append(listelements.assamble(listelements.items[i]));
+            }
+              
+        }
     }
-}
+    listelements.setitems(elementsList)
 
 function asd(){
-    listusers.setusers(elementsList);
-    listusers.listall();
+    listelements.setusers(elementsList);
+    listelements.listall();    
 }
+$("#action4").on("click",function(){
+    var price= $("#price").val();
+    listelements.listByPrice(price);
+})
+
+    
+   
+}
+
 
