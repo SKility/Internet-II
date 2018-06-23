@@ -1,50 +1,53 @@
 var listelements={
-    listall:function(){
-        for(var i=0;i<listusers.items.length;i++){
-            $("#table-body").append(listelements.assamble(this.items[i]));
-       };
-    },
-    assamble:function(items){
-        return '<div class="row">'+
-        '<span class="col-2">'+'</span>' +
-        '<span class="col-2">'+ items.brand + '</span>' +
-        '<span class="col-2">'+ items.location+'</span>' +
-        '<span class="col-2">'+ items.lunch+'</span>' +
-        '<span class="col-2">'+ items.price+'</span>' +
-        '<span class="col-2">'+'</span>' +
-        '<span class="description col-12">'+'</span>' +
-      '</div>'
-    },
     items:[],
-    setusers:function(items){
-        listelements.items=items
+    setusers:function(data){
+        listelements.items=data;
     },
-    log:function(item){
-        console.log(this.items[item]);
-    },
+listall:function(){
+    for(var i = 0; i < listelements.items.length;i++){
+        $("#table-body").append(listelements.assamble(listelements.items[i]));
+   };
+},
+assamble:function(item){
+    return '<div class="row">'+
+    '<span class="col-2">'+'</span>' +
+    '<span class="col-2">'+ item.brand + '</span>' +
+    '<span class="col-2">'+ item.location+'</span>' +
+    '<span class="col-2">'+ item.lunch+'</span>' +
+    '<span class="col-2">'+ item.price+'</span>' +
+    '<span class="col-2">'+'</span>' +
+    '<span class="description col-12">'+'</span>' +
+  '</div>'
+},
 
-    function: listByPrice(price){
-        for(var i=0;listelements.items.length>i;i++){
-            if(listelements.items[i].price<price){
-                listelements.assamble(listelements.items[i]);
-              $("#table-body").append(listelements.assamble(listelements.items[i]));
-            }
-              
+listByPrice: function(price){
+    for(var i=0 ; listelements.items.length>i;i++){
+        if(listelements.items[i].price<price){
+            listelements.assamble(listelements.items[i]); // Va a llamar a los usuarios que cumplan la misma condicion
+          $("#table-body").prepend(listelements.assamble(listelements.items[i]));
         }
-    }
-    listelements.setitems(elementsList)
+     }
+},
+    
+};
 
-function asd(){
-    listelements.setusers(elementsList);
-    listelements.listall();    
-}
 $("#action4").on("click",function(){
     var price= $("#price").val();
     listelements.listByPrice(price);
-})
+    });
 
-    
-   
-}
+// Clear
+function clear(){
+    $("#table-body").html("")}
+
+
+// Cuando se haga click en el id especificado, se le va a dar un valor a price 
+// y se lo va a convertir en el valor del argumento de listByPrice
+
+
+listelements.setusers(elementsList)
+listelements.listall()
+
+
 
 
