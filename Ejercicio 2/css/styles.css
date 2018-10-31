@@ -1,89 +1,73 @@
-.nesflis{text-align: center ;
+body{
+    background-color:black;
+    color: white;
+    margin: 0 auto;
+    font-family: helvetica;
+}
+
+.nesflis{
+    text-align: center ;
     color:white;
-    font-size:100PX
+    font-size:100PX;
+    margin: 0 auto;
+    background-color: blue;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
-body{background-color:black}
-
-.caja {width:100%;
-height:5%;
-background-color:blue;
-margin-left:auto;
-margin-right:auto}
-
-img{width:150px;
-height:200px;
-float:left;
-margin-left:210px;
-margin-top:100px}
-
-.datos{width:400px;
-height:200px;
-position:absolute;
-top:800px;
-left:700px;
-color:white
+.caja {
+    width:100%;
+    height:25%;
+    background-color:blue;
+    top:5%;
 }
 
-.Form{width:100px;
-height:400px;
-position:absolute;
-top:700px;
-left:750px;
-color:white}
-
-.texto1{color:white;
-position:absolute;
-top:575px;
-left:235px;
-font-size:150%
+.Poster{
+    width:200px;
 }
 
-.texto2{color:white;
-    position:absolute;
-    top:575px;
-    left:600px;
-    font-size:150%
-    }
+.PosterSingle{
+    height: 300px;
+}
 
-    .texto3{color:white;
-        position:absolute;
-        top:575px;
-        right:620px;
-        font-size:150%;
-        }
+#datos{
+    padding: 15px 0 20px 0;
+    background-color: gray;
+    list-style: none;
+    text-align: center;
+    margin: 5% 40% 5% 40%;
+    border: 2px solid white;
+}
 
-        .texto4{color:white;
-            position:absolute;
-            top:575px;
-            right:235px;
-            font-size:150%
-            }
+#datos li{
+    padding: 0 auto;
+    margin-top: 16px;
+}
 
+.Contenedor{
+    padding-left: 0px;
+}
 
-.hide{display:none}
+.Contenedor li{
+    display: inline-block;
+    width: 10%;
+    margin: 0 1% 0 1%;
+}
 
-.puntaje{color: white}
+.Puntaje{
+    color:gold;
+}
 
-.p1{position:absolute;
-    top:650px;
-    left:270px;}
+.Single{
+    text-align: center;
+    border: 2px solid white;
+    margin: 0 auto;
+    padding-left: 0;
+    list-style: none;
+    margin: 0 35% 0 35%;
+}
 
-    .p2{position:absolute;
-        top:650px;
-        left:635px;}
-
-        .p3{position:absolute;
-            top:650px;
-            right:640px;}
-
-            .p4{position:absolute;
-                top:650px;
-                right:280px;}
-
-.but{position:absolute;
-    top:670px;
-    left:650px;}
-
-    .traer{color: white;
+.Single img{
+    height: 500px;
 }
